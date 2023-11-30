@@ -9,7 +9,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://chat-app-cw69.onrender.com/",
     methods: ["POST", "GET", "PUT"],
     credentials: true,
     optionSuccessStatus: 200
