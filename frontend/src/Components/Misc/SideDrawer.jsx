@@ -33,7 +33,7 @@ const SideDrawer = () => {
                         "Authorization": `Bearer ${user.token}`,
                     }
                 };
-                const { data } = await axios.get(`http://localhost:5000/api/user?search=${search}`, config);
+                const { data } = await axios.get(`https://chat-app-cw69.onrender.com/api/user?search=${search}`, config);
                 setLoading(false);
                 setSearchResult(data);
             } catch (error) {
@@ -58,7 +58,7 @@ const SideDrawer = () => {
                     "Authorization": `Bearer ${user.token}`
                 }
             }
-            const { data } = await axios.post("http://localhost:5000/api/chats", { userId }, config);
+            const { data } = await axios.post("https://chat-app-cw69.onrender.com/api/chats", { userId }, config);
             if (!chats.find((c) => c._id === data._id)) {
                 setChats([...chats, data]);
             }
