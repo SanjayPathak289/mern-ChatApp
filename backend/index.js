@@ -59,7 +59,7 @@ io.on("connection", (socket) => {
 
 
     socket.on("join chat", (room) => {
-        socket.join(room);
+        socket.join(room); //for handling typing
         console.log("User joined room" + room);
     })
 
